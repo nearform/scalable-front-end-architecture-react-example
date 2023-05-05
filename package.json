@@ -9,13 +9,18 @@
     "urql": "^4.0.2"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
     "@types/node": "18.16.3",
     "@types/react": "18.2.5",
     "@types/react-dom": "18.2.3",
+    "@vitejs/plugin-react": "^4.0.0",
     "eslint": "8.39.0",
     "eslint-config-next": "13.4.0",
+    "jsdom": "^22.0.0",
     "next": "13.4.0",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "vitest": "^0.31.0"
   },
   "name": "scalable-front-end-architecture-react-example",
   "private": true,
@@ -23,7 +28,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "vitest run --config ./vitest.config.ts --passWithNoTests",
+    "test:cov": "vitest run -config ./vitest.config.ts --coverage --passWithNoTests",
+    "test:w": "vitest watch --config ./vitest.config.ts --passWithNoTests"
   },
   "version": "0.0.0"
 }
